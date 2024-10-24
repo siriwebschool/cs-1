@@ -1,15 +1,14 @@
 
+
 #include <stdio.h>
 int main() {
-    long nc = 0;  // Use long to handle large counts (though int would be sufficient for most cases)
-    int c;          // Variable to hold each character read from input
-
-    // Read characters one by one until EOF is encountered
-    while ((c = getchar()) != EOF) {
-        ++nc;  // Increment character count
-    }
-
+    double nc; // Variable to store the count of characters
+    // Use a for loop to read characters until EOF is encountered
+    for (nc = 0; getchar() != EOF; ++nc);
+         // Loop body is empty; increment count each time a character is read
+         
     // Print the total count of characters
-   printf("Total characters:%ld\n", nc);
+    printf("Total Characters: %.0f\n", nc); // Print the count as a whole number
+
     return 0;
 }
